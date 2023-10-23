@@ -40,6 +40,7 @@ public class CustomerService {
 
         if (customerToUpdate != null) {
             customerToUpdate.setCustomerName(customer.getCustomerName());
+            return customerRepo.save(customerToUpdate);
         }
         return null;
     }
@@ -49,6 +50,7 @@ public class CustomerService {
 
         if (customerToUpdate != null) {
             customerToUpdate.setCustomerMail(customer.getCustomerMail());
+            return customerRepo.save(customerToUpdate);
         }
         return null;
     }
@@ -58,6 +60,7 @@ public class CustomerService {
 
         if (customerToUpdate != null) {
             customerToUpdate.setCustomerPhone(customer.getCustomerPhone());
+            return customerRepo.save(customerToUpdate);
         }
         return null;
     }

@@ -41,6 +41,7 @@ public class PartService {
 
         if (partToUpdate != null) {
             partToUpdate.setPartName(part.getPartName());
+            return partRepo.save(partToUpdate);
         }
         return null;
     }
@@ -50,6 +51,7 @@ public class PartService {
 
         if (partToUpdate != null) {
             partToUpdate.setPartQuantity(part.getPartQuantity());
+            return partRepo.save(partToUpdate);
         }
         return null;
     }
@@ -59,6 +61,7 @@ public class PartService {
 
         if (partToUpdate != null) {
             partToUpdate.setPartSize(part.getPartSize());
+            return partRepo.save(partToUpdate);
         }
         return null;
     }
@@ -68,6 +71,7 @@ public class PartService {
 
         if (partToUpdate != null) {
             partToUpdate.setPartInStock(part.getPartInStock());
+            return partRepo.save(partToUpdate);
         }
         return null;
     }
@@ -77,6 +81,7 @@ public class PartService {
 
         if (partToUpdate != null) {
             partToUpdate.setPartColor(part.getPartColor());
+            return partRepo.save(partToUpdate);
         }
         return null;
     }

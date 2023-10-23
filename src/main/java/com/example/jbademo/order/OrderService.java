@@ -40,6 +40,7 @@ public class OrderService {
 
         if (orderToUpdate != null) {
             orderToUpdate.setOrderName(order.getOrderName());
+            return orderRepo.save(orderToUpdate);
         }
         return null;
     }
