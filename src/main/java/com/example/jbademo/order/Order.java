@@ -18,7 +18,6 @@ public class Order {
 
     private String orderName;
 
-    public Order(String orderName) {
-        this.orderName = orderName;
-    }
+    private Boolean orderPayment;
+
 }

@@ -42,7 +42,12 @@ public class OrderController {
     }
 
     @PutMapping("/name")
-    public Order updateOrderById(@RequestBody Order order){
+    public Order updateOrderNameById(@RequestBody Order order){
         return orderService.updateOrderName(order);
+    }
+
+    @PutMapping("/inStock")
+    public Order updateOrderInStockById(@RequestBody Order order) {
+        return orderService.updateOrderPayment(order);
     }
 }

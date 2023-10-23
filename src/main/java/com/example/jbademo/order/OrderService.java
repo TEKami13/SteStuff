@@ -44,4 +44,14 @@ public class OrderService {
         }
         return null;
     }
+
+    public Order updateOrderPayment(Order order) {
+        Order orderToUpdate = orderRepo.findById(order.getOrderId()).orElse(null);
+
+        if (orderToUpdate != null) {
+            orderToUpdate.setOrderPayment(order.getOrderPayment());
+            return orderRepo.save(orderToUpdate);
+        }
+        return null;
+    }
 }
