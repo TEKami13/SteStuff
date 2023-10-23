@@ -1,6 +1,5 @@
 package com.example.jbademo.part;
 
-import com.example.jbademo.order.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,7 +42,27 @@ public class partController {
     }
 
     @PutMapping("/name")
-    public Part updatePartById(@RequestBody Part part){
+    public Part updatePartNameById(@RequestBody Part part){
         return partService.updatePartName(part);
+    }
+
+    @PutMapping("/quantity")
+    public Part updatePartQuantityById(@RequestBody Part part){
+        return partService.updatePartQuantity(part);
+    }
+
+    @PutMapping("/size")
+    public Part updatePartSizeById(@RequestBody Part part){
+        return partService.updatePartSize(part);
+    }
+
+    @PutMapping("/quantity")
+    public Part updatePartInStockById(@RequestBody Part part){
+        return partService.updatePartInStock(part);
+    }
+
+    @PutMapping("/quantity")
+    public Part updatePartColorById(@RequestBody Part part){
+        return partService.updatePartColor(part);
     }
 }

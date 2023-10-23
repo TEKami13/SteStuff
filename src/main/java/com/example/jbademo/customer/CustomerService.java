@@ -43,4 +43,22 @@ public class CustomerService {
         }
         return null;
     }
+
+    public Customer updateCustomerMail(Customer customer) {
+        Customer customerToUpdate = customerRepo.findById(customer.getCustomerId()).orElse(null);
+
+        if (customerToUpdate != null) {
+            customerToUpdate.setCustomerMail(customer.getCustomerMail());
+        }
+        return null;
+    }
+
+    public Customer updateCustomerPhone(Customer customer) {
+        Customer customerToUpdate = customerRepo.findById(customer.getCustomerId()).orElse(null);
+
+        if (customerToUpdate != null) {
+            customerToUpdate.setCustomerPhone(customer.getCustomerPhone());
+        }
+        return null;
+    }
 }

@@ -18,7 +18,12 @@ public class Part {
 
     private String partName;
 
-    public Part(String partName) {
-        this.partName = partName;
-    }
+    private int partQuantity;
+
+    private String partSize;
+
+    private Boolean partInStock;
+
+    private String partColor;
+
 }

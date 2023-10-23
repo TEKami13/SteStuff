@@ -44,4 +44,40 @@ public class PartService {
         }
         return null;
     }
+
+    public Part updatePartQuantity(Part part) {
+        Part partToUpdate = partRepo.findById(part.getPartId()).orElse(null);
+
+        if (partToUpdate != null) {
+            partToUpdate.setPartQuantity(part.getPartQuantity());
+        }
+        return null;
+    }
+
+    public Part updatePartSize(Part part) {
+        Part partToUpdate = partRepo.findById(part.getPartId()).orElse(null);
+
+        if (partToUpdate != null) {
+            partToUpdate.setPartSize(part.getPartSize());
+        }
+        return null;
+    }
+
+    public Part updatePartInStock(Part part) {
+        Part partToUpdate = partRepo.findById(part.getPartId()).orElse(null);
+
+        if (partToUpdate != null) {
+            partToUpdate.setPartInStock(part.getPartInStock());
+        }
+        return null;
+    }
+
+    public Part updatePartColor(Part part) {
+        Part partToUpdate = partRepo.findById(part.getPartId()).orElse(null);
+
+        if (partToUpdate != null) {
+            partToUpdate.setPartColor(part.getPartColor());
+        }
+        return null;
+    }
 }

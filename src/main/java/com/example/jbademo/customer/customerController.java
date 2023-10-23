@@ -42,7 +42,17 @@ public class customerController {
     }
 
     @PutMapping("/name")
-    public Customer updateCustomerById(@RequestBody Customer customer){
+    public Customer updateCustomerNameById(@RequestBody Customer customer){
         return customerService.updateCustomerName(customer);
+    }
+
+    @PutMapping("/phone")
+    public Customer updateCustomerPhoneById(@RequestBody Customer customer){
+        return customerService.updateCustomerPhone(customer);
+    }
+
+    @PutMapping("/mail")
+    public Customer updateCustomerMailById(@RequestBody Customer customer){
+        return customerService.updateCustomerMail(customer);
     }
 }
