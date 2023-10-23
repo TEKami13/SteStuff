@@ -7,12 +7,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/part")
-public class partController {
+public class PartController {
 
     private final PartService partService;
 
     @Autowired
-    public partController(PartService partService) {
+    public PartController(PartService partService) {
         this.partService = partService;
     }
 

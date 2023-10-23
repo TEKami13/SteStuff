@@ -7,12 +7,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/order")
-public class orderController {
+public class OrderController {
 
     private final OrderService orderService;
 
     @Autowired
-    public orderController(OrderService orderService) {
+    public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
 
